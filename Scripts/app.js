@@ -1,4 +1,5 @@
 import { sendEmail } from "./contact.js";
+import { emailCheck } from "./email-validation.js";
 
 
 const popElem = document.querySelector('.pop-ul')
@@ -60,20 +61,34 @@ window.addEventListener('scroll', () => {
   menuTxt.innerText = 'Menu';
 });
 
-document.querySelector('form').addEventListener('submit', (event) => {
-  event.preventDefault();
+document.querySelector('button').addEventListener('click', (event) => {
+  
   let name = document.querySelector('.name').value
   let email = document.querySelector('.email').value
   let message = document.querySelector('.message').value
-  let dataObj = {
-    title: 'Message From Porfolio',
-    name,
-    email,
-    message
-  }
 
-  sendEmail(dataObj);
-  document.querySelector('.name').value = ''
-  document.querySelector('.email').value = ''
-  document.querySelector('.message').value = ''
+  const emailValidation = emailCheck(email);
+  if (!name) {
+    document.querySelector('.name').focus();
+    alert('Please type your name.')
+  } else if (!emailValidation) {
+    document.querySelector('.email').focus();
+    alert('Please type a valid email Address.')
+  } else if (!message) {
+    document.querySelector('.message').focus();
+    alert('Please type your message.')
+  } else {
+    let dataObj = {
+      title: 'Message From Porfolio',
+      name,
+      email,
+      message
+    }
+  
+    sendEmail(dataObj);
+    document.querySelector('.name').value = ''
+    document.querySelector('.email').value = ''
+    document.querySelector('.message').value = ''
+  }
+ 
 })
