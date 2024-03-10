@@ -851,7 +851,7 @@ footer img {
   header {
     display: flex;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 0.89);
+    background: rgba(0, 0, 0,);
     color: white;
     align-items: start;
     padding: 5px 25px;
@@ -862,7 +862,6 @@ footer img {
 
   .left-section img {
     width: 75px;
-    opacity: .89;
   }
 
   .right-section {
