@@ -1,13 +1,16 @@
 import { sendEmail } from "./contact.js";
 import { emailCheck } from "./email-validation.js";
+import { slideFunction } from "./slide-section.js";
 
-
+slideFunction();
 const popElem = document.querySelector('.pop-ul')
 const menuTxt = document.querySelector('.menu-text') 
+const topCont = document.querySelector('.notificataion-board-cont')
 
 document.querySelectorAll('.menu, .menu-text').forEach(elem => {
   elem.addEventListener('click', () => {
     popElem.classList.toggle('show')
+    // topCont.classList.toggle('margin-top')
     if (menuTxt.innerText === 'Menu') {
       menuTxt.innerText = 'Close'
     } else {
@@ -26,6 +29,7 @@ document.querySelectorAll('.about').forEach(elem => {
   elem.addEventListener('click', () => {
     document.querySelector('.about-cont').scrollIntoView()
     popElem.classList.remove('show')
+
   });
 });
 
@@ -33,6 +37,7 @@ document.querySelectorAll('.projects').forEach(elem => {
   elem.addEventListener('click', () => {
     document.querySelector('.projects-cont').scrollIntoView()
     popElem.classList.remove('show')
+
   });
 });
 
@@ -40,6 +45,7 @@ document.querySelectorAll('.technologies').forEach(elem => {
   elem.addEventListener('click', () => {
     document.querySelector('.tecnologies-cont').scrollIntoView()
     popElem.classList.remove('show')
+
   });
 });
 
