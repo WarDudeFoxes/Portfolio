@@ -21,7 +21,8 @@ document.querySelectorAll('.menu, .menu-text').forEach(elem => {
 
 document.querySelectorAll('.home').forEach(elem => {
   elem.addEventListener('click', () => {
-  location.reload()
+  document.querySelector('.notificataion-board-cont').scrollIntoView()
+    popElem.classList.remove('show')
   });
 });
 
@@ -49,13 +50,21 @@ document.querySelectorAll('.technologies').forEach(elem => {
   });
 });
 
+document.querySelectorAll('.skills').forEach(elem => {
+  elem.addEventListener('click', () => {
+    document.querySelector('.skills-cont').scrollIntoView()
+    popElem.classList.remove('show')
+
+  });
+});
+
 document.querySelectorAll('.contact').forEach(elem => {
   elem.addEventListener('click', () => {
     document.querySelector('.contact-cont').scrollIntoView();
   });
 });
 
-document.querySelectorAll('ul, .left-section, .contact-cont, .tecnologies-cont, .projects-cont, .about-cont, footer').forEach(elem => {
+document.querySelectorAll('ul, .left-section, .contact-cont, .tecnologies-cont, .projects-cont, .about-cont, footer, .skills-cont , .notificataion-board-cont').forEach(elem => {
   elem.addEventListener('click', () => {
     popElem.classList.remove('show');
     menuTxt.innerText = 'Menu'
@@ -77,6 +86,7 @@ document.querySelector('button').addEventListener('click', (event) => {
   if (!name) {
     document.querySelector('.name').focus();
     alert('Please type your name.')
+    console.log(document.querySelector('.name'));
   } else if (!emailValidation) {
     document.querySelector('.email').focus();
     alert('Please type a valid email Address.')

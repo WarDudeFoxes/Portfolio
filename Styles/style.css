@@ -588,7 +588,7 @@ footer img {
 
   .about-cont, .projects-cont, .tecnologies-cont, .contact-cont {
     margin-top: 20px;
-    border-bottom: 1px solid gainsboro;
+    /* border-bottom: 1px solid gainsboro; */
     padding: 10px 0;
   }
 
@@ -724,10 +724,7 @@ footer img {
   }
     
   .skills-cont {
-    /* border: 2px solid gainsboro;
-    margin-left:  8%;
-    margin-right:  8%;
-    padding-bottom: 50px; */
+    padding-bottom: 20px;
   }
 
   .skills-container {
@@ -899,7 +896,7 @@ footer img {
 
   .about-cont, .projects-cont, .tecnologies-cont, .contact-cont, .skills-cont {
   margin-top: 20px;
-  /* border-bottom: 1px solid gainsboro; */
+  border-bottom: 2px solid gainsboro;
   padding: 10px 0;
   }
 
@@ -908,7 +905,7 @@ footer img {
     padding: 10px 8%;
   }
 
-  .name {
+  .dev-display-name {
     display: inline-block;
   }
   .pro {
@@ -1029,10 +1026,7 @@ footer img {
   }
     
   .skills-cont {
-    /* border: 2px solid gainsboro;
-    margin-left:  8%;
-    margin-right:  8%;
-    padding-bottom: 50px; */
+    padding-bottom: 20px;
   }
 
   .skills-container {
