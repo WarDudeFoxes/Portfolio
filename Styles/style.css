@@ -223,9 +223,10 @@ nav {
   position: absolute;
   top: 50%;
   /* left: 50%; */
+  /* left: 50%; */
   cursor: pointer;
   color: gainsboro;
-  transform: translate(-50%, -50%);
+  transform: translateY( -50%);
 }
 
 .prev {
@@ -710,10 +711,7 @@ footer img {
     font-size: 1.2rem;
   }
   
-  
-  .arrow {
-    transform: translate(-50%, -50%);
-  }
+
 
   .prev {
     left : 20px;
@@ -853,7 +851,7 @@ footer img {
   header {
     display: flex;
     justify-content: space-between;
-    background: black;
+    background: rgba(0, 0, 0, 0.89);
     color: white;
     align-items: start;
     padding: 5px 25px;
@@ -864,6 +862,7 @@ footer img {
 
   .left-section img {
     width: 75px;
+    opacity: .89;
   }
 
   .right-section {
@@ -898,11 +897,13 @@ footer img {
   margin-top: 20px;
   border-bottom: 2px solid gainsboro;
   padding: 10px 0;
+  margin-right: 5%;
+  margin-left: 5%;
   }
 
   .notificataion-board-cont {
-    margin-top: 100px;
-    padding: 10px 8%;
+    margin-top: 80px;
+    padding: 10px 5%;
   }
 
   .dev-display-name {
@@ -1013,9 +1014,6 @@ footer img {
     color: whitesmoke;
   }
   
-  .arrow {
-    transform: translate(0%, 0%);
-  }
 
   .prev {
     left : 20px;
@@ -1153,4 +1151,5 @@ footer img {
 .show {
   display: flex;
   transform: translateY(0);
+  color: white;
 }
