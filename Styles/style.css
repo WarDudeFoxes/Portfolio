@@ -1106,13 +1106,18 @@ footer img {
   .location, .contact-details {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 11px;
+  }
+
+  .location small {
+    margin: 0;
   }
 
   .detail-container {
     display: flex;
     align-items: center;
     column-gap: 5px;
+    margin-top: 0;
   }
 
   .detail-container img {
@@ -1134,13 +1139,13 @@ footer img {
   footer img {
     width: 75px;
     border-radius: 50px;
-    /* margin-top: -20px; */
-    /* display: none; */
   }
 
   .foooter-content {
     display: none;
   }
+
+
 }
 
 .margin-top {
